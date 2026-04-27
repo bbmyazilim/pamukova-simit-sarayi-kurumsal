@@ -1,1 +1,27 @@
 
+# Pamukova Simit Sarayı - Kurumsal Web Projesi
+
+Bu proje, Sakarya Pamukova'da hizmet veren **Simit Sarayı** şubesi için geliştirilmiş; geniş ürün yelpazesini sergileyen, dinamik kampanyalar sunan ve müşteri etkileşimini ön planda tutan profesyonel bir kurumsal web sitesidir.
+
+## 🚀 Öne Çıkan Özellikler
+- **Kapsamlı Ürün Kataloğu:** Ürünlerin kategorize edildiği ve görsel sunumun ön planda olduğu `urunler.html` sayfası.
+- **Dinamik Kampanya Yönetimi:** `kampanyalar.html` sayfasında yer alan JavaScript tabanlı özel geri sayım sayacı (Countdown Timer).
+- **Çoklu Şube & İletişim:** Google Haritalar entegrasyonu ve WhatsApp hızlı iletişim kanalları.
+- **Tam Responsive Tasarım:** Tüm ekran boyutlarında (mobil, tablet, masaüstü) optimize edilmiş kullanıcı deneyimi.
+- **SEO Optimizasyonu:** Her sayfa için özel meta verileri ve semantik HTML5 yapısı.
+
+## 🛠 Teknik Altyapı
+- **Frontend:** HTML5, CSS3, Bootstrap 5
+- **JavaScript:** Dinamik sayaçlar, form validasyonları ve AOS animasyonları.
+- **İkon Seti:** Bootstrap Icons & FontAwesome
+
+## 📂 Sayfa Yapısı
+- `index.html`: Modern slider ve şube tanıtımlı ana sayfa.
+- `urunler.html`: Detaylı ürün listeleme.
+- `kampanyalar.html`: Sınırlı süreli teklifler ve sayaç sistemi.
+- `subelerimiz.html`: Şube lokasyon ve çalışma saatleri bilgisi.
+- `iletisim.html`: Gelişmiş iletişim formu ve harita entegrasyonu.
+
+---
+**Geliştiren:** [BBM YAZILIM](https://github.com/bbmyazilim)  
+*İşletmenizi dijital dünyada bir adım öne taşıyoruz.*
