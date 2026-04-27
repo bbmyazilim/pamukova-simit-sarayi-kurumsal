@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simit Sarayı Pamukova - İletişim</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Simit Sarayı Pamukova ile iletişime geçin. Şubelerimiz, çalışma saatleri, telefon numarası ve WhatsApp hattı hakkında bilgi alın.">
+    <meta name="keywords" content="simit sarayı, pamukova, iletişim, telefon, whatsapp, adres, şubeler, çalışma saatleri">
+    <meta name="author" content="Simit Sarayı Pamukova">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Bootstrap 5 CSS with CDN fallback to local -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" onload="this.onload=null;this.rel='stylesheet'" onerror="this.onerror=null;this.href='css/bootstrap.min.css';this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/bootstrap.min.css"></noscript>
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Location Links CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --simit-brown: #8B4513;
+            --simit-gold: #DAA520;
+            --simit-cream: #FFF8DC;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(139, 69, 19, 0.8), rgba(139, 69, 19, 0.8)), 
+                        url('img/bulva-carousel.jpg') center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .section-title {
+            color: var(--simit-brown);
+            font-weight: bold;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--simit-gold);
+        }
+        
+        .contact-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--simit-gold);
+            margin-bottom: 20px;
+        }
+        
+        .btn-simit {
+            background: var(--simit-gold);
+            color: var(--simit-brown);
+            border: 2px solid var(--simit-brown);
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-simit:hover {
+            background: var(--simit-brown);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .form-control:focus {
+            border-color: var(--simit-gold);
+            box-shadow: 0 0 0 0.25rem rgba(218, 165, 32, 0.25);
+        }
+        
+        .location-card {
+            border: 2px solid var(--simit-gold);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .location-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--simit-gold);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        footer {
+            background: var(--simit-brown);
+            color: white;
+            padding: 30px 0;
+        }
+        
+        .map-container {
+            height: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .faq-item {
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        
+        .faq-header {
+            background: var(--simit-cream);
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .faq-body {
+            padding: 20px;
+            display: none;
+        }
+        
+        .faq-header::after {
+            content: '\f282';
+            font-family: bootstrap-icons;
+            float: right;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-header.active::after {
+            transform: rotate(180deg);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                text-align: center;
+            }
+            
+            .map-container {
+                height: 250px;
+            }
+            
+            .contact-card .card-title {
+                font-size: 1.1rem;
+            }
+            
+            .contact-card .card-text {
+                font-size: 0.9rem;
+            }
+            
+            .location-card .card-title {
+                font-size: 1rem;
+            }
+            
+            .faq-header {
+                font-size: 0.9rem;
+                padding: 12px 15px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-section {
+                padding: 40px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 1.5rem;
+            }
+            
+            .contact-icon {
+                font-size: 2rem;
+            }
+            
+            .contact-card .card-title {
+                font-size: 1rem;
+            }
+            
+            .contact-card .card-text {
+                font-size: 0.85rem;
+            }
+            
+            .location-card .card-title {
+                font-size: 0.9rem;
+            }
+            
+            .location-card .card-text {
+                font-size: 0.85rem;
+            }
+            
+            .faq-header {
+                font-size: 0.85rem;
+                padding: 10px 12px;
+            }
+            
+            .faq-body {
+                font-size: 0.85rem;
+                padding: 15px;
+            }
+            
+            .social-links a {
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+                margin: 0 3px;
+            }
+        }
+        
+        .navbar {
+            background: var(--simit-brown) !important;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Navbar decorative elements */
+        .navbar::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(218, 165, 32, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .navbar::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                var(--simit-gold) 25%, 
+                var(--simit-gold) 50%, 
+                var(--simit-gold) 75%, 
+                transparent 100%);
+            box-shadow: 0 0 10px rgba(218, 165, 32, 0.5);
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            50% { transform: translateY(20px) translateX(30px); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-color-simit-brown">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/bulvar.png" alt="Simit Sarayı" width="70" height="70" class="d-inline-block align-top str">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="urunler.html">Ürünlerimiz</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hakkimizda.html">Hakkımızda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="şubelerimiz.html">Şubelerimiz</a></li>
+                    <li class="nav-item"><a class="nav-link" href="haberler-ve-gelişmeler.html">Haberler Ve Gelişmeler</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="iletisim.html">İletişim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kampanyalar.html">Kampanyalar</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="mb-4">İletişim</h1>
+            <p class="lead fs-4">Bize ulaşmak için aşağıdaki bilgileri kullanabilirsiniz</p>
+        </div>
+    </section>
+    
+    <!-- Contact Info Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title mb-5">Bize Ulaşın</h2>
+            
+            <div class="row g-4">
+                <!-- Telefon -->
+                <div class="col-md-4">
+                    <div class="card contact-card text-center h-100">
+                        <div class="card-body">
+                            <div class="contact-icon">
+                                <i class="bi bi-telephone"></i>
+                            </div>
+                            <h5 class="card-title">Telefon</h5>
+                            <p class="card-text">Sipariş ve genel bilgi için bizi arayın</p>
+                            <a href="tel:+905468311304" class="btn btn-simit">Telefon Et</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- WhatsApp -->
+                <div class="col-md-4">
+                    <div class="card contact-card text-center h-100">
+                        <div class="card-body">
+                            <div class="contact-icon">
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <h5 class="card-title">WhatsApp</h5>
+                            <p class="card-text">Hızlı sipariş ve destek için WhatsApp'tan yazın</p>
+                            <a href="https://wa.me/905468311304" class="btn btn-simit" target="_blank">Mesaj Gönder</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- E-posta -->
+                <div class="col-md-4">
+                    <div class="card contact-card text-center h-100">
+                        <div class="card-body">
+                            <div class="contact-icon">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+                            <h5 class="card-title">E-posta</h5>
+                            <p class="card-text">Genel sorularınız için e-posta gönderin</p>
+                            <a href="mailto:info@simitsarayi-pamukova.com" class="btn btn-simit">E-posta Gönder</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Şubelerimiz Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title mb-5">Şubelerimiz</h2>
+            
+            <div class="row g-4">
+                <!-- Pamukova Şubesi -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card location-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="bi bi-geo-alt me-2 text-primary"></i>
+                                Simit Sarayı Pamukova Şubesi
+                            </h5>
+                            <p class="card-text">Pamukova, Sakarya</p>
+                            <a href="https://www.google.com/maps?q=40.5081,30.1673" class="btn btn-simit w-100 mb-2" target="_blank">
+                                <i class="bi bi-map me-2"></i>Haritada Görüntüle
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- pamukova fırını'mız -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card location-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="bi bi-geo-alt me-2 text-primary"></i>
+                                Simit Sarayı pamukova fırını
+                            </h5>
+                            <p class="card-text">pamukova, Sakarya</p>
+                            <a href="https://www.google.com/maps?q=40.7974,30.4024" class="btn btn-simit w-100 mb-2" target="_blank">
+                                <i class="bi bi-map me-2"></i>Haritada Görüntüle
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Geyve Şubesi -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card location-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="bi bi-geo-alt me-2 text-primary"></i>
+                                Simit Sarayı Geyve Şubesi
+                            </h5>
+                            <p class="card-text">Geyve, Sakarya</p>
+                            <a href="https://www.google.com/maps?q=40.7500,30.3000" class="btn btn-simit w-100 mb-2" target="_blank">
+                                <i class="bi bi-map me-2"></i>Haritada Görüntüle
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- İletişim Formu Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title mb-5">İletişim Formu</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <form id="contactForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="name" class="form-label">Adınız Soyadınız</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">E-posta Adresiniz</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="subject" class="form-label">Konu</label>
+                                        <input type="text" class="form-control" id="subject" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label">Mesajınız</label>
+                                        <textarea class="form-control" id="message" rows="5" required></textarea>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <button type="submit" class="btn btn-simit">Mesaj Gönder</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SSS Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title mb-5">Sıkça Sorulan Sorular</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            Sipariş vermek için hangi yolları kullanabilirim?
+                        </div>
+                        <div class="faq-body">
+                            <p>Siparişlerinizi aşağıdaki yollarla verebilirsiniz:</p>
+                            <ul>
+                                <li>Telefon: +90 546 831 1304</li>
+                                <li>WhatsApp: +90 546 831 1304</li>
+                                <li>Mobil uygulamamız ve Web Sitemizin Sipariş Ver Kısmından.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            Çalışma saatleriniz nedir?
+                        </div>
+                        <div class="faq-body">
+                            <p>Tüm şubelerimizde çalışma saatlerimiz:</p>
+                            <p class="fw-bold">Her Gün: 07:00 - 01:00</p>
+                            <p>Tatil günleri dahil her gün bu saatler arasında hizmet veriyoruz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            Şubelerinize özel kampanyalarınız var mı?
+                        </div>
+                        <div class="faq-body">
+                            <p>Evet, şubelerimize göre zaman zaman özel kampanyalar yapıyoruz. Kampanyalardan haberdar olmak için:</p>
+                            <ul>
+                                <li>Sosyal medya hesaplarımızı takip ederek</li>
+                                <li>Web sitemizdeki kampanyalar bölümünü kontrol ederek.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Çalışma Saatleri Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title mb-5">Çalışma Saatleri</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card text-center shadow-sm">
+                        <div class="card-body">
+                            <div class="contact-icon">
+                                <i class="bi bi-clock"></i>
+                            </div>
+                            <h3 class="card-title">Her Gün</h3>
+                            <p class="display-6 fw-bold color-simit-brown">07:00 - 01:00</p>
+                            <p class="card-text">Tüm şubelerimizde bu saatler arasında hizmet veriyoruz.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="img/bulvar.png" alt="Simit Sarayı" width="80" height="80" class="mb-3">
+                    <h4>Simit Sarayı Pamukova</h4>
+                    <p class="mb-0">Pamukova'nın En Taze Lezzetleri.</p>
+                    <p class="mb-0"><i class="bi bi-telephone me-2"></i><a class="text-decoration-none text-white" href="tel:+90 5468311304">+90 546 831 1304</a></p>
+                    <p class="mb-0"><i class="bi bi-clock me-2"></i> Her gün 07:00 - 01:00</p>
+                    <div class="social-links mt-3">
+                        <a href="https://www.facebook.com/pamukovabulvarsimit/" class="text-decoration-none social-links" target="_blank"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/pamukovabulvarsimit/" class="text-decoration-none social-links" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://wa.me/905468311304" class="text-decoration-none social-links" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="https://wa.me/905468311304" class="btn btn-success rounded-5 me-2" target="_blank">
+                            <i class="bi bi-whatsapp me-1"></i> WhatsApp
+                        </a>
+                        <a href="#subeler" class="btn btn-outline-light rounded-5 ">
+                            <i class="bi bi-geo-alt me-1"></i> Şubelerimiz
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-color-white-transparent">
+            <p class="mb-0">&copy; 2025 bulvar Simit Sarayı Pamukova. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Form Submission Script -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // In a real application, you would send this data to a server
+            // For now, we'll just show an alert
+            alert(`Sayın ${name}, mesajınız başarıyla gönderildi. En kısa sürede sizinle iletişime geçeceğiz.`);
+            
+            // Reset form
+            this.reset();
+        });
+        
+        // FAQ Accordion
+        document.querySelectorAll('.faq-header').forEach(header => {
+            header.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const body = this.nextElementSibling;
+                if (body.style.display === 'block') {
+                    body.style.display = 'none';
+                } else {
+                    body.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

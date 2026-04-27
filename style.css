@@ -1,0 +1,1824 @@
+     :root {
+        --simit-brown: #8B4513;
+        --simit-gold: #DAA520;
+        --simit-cream: #FFF8DC;
+    }
+    
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .hero-section {
+        background: linear-gradient(rgba(139, 69, 19, 0.7), rgba(139, 69, 19, 0.7)), 
+                    url('../img/bulva-carousel.jpg') center/cover;
+        color: white;
+        padding: 100px 0;
+        text-align: center;
+    }
+    
+    .hero-section h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .hero-section .lead {
+        font-size: 1.25rem;
+        max-width: 800px;
+        margin: 0 auto 30px;
+    }
+    
+    .btn-simit.btn-lg {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+        background: var(--simit-gold);
+        color: var(--simit-brown);
+        border: 2px solid var(--simit-brown);
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-simit.btn-lg:hover {
+        background: var(--simit-brown);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    @media (max-width: 768px) {
+        .hero-section {
+            padding: 60px 0;
+        }
+        
+        .hero-section h1 {
+            font-size: 2rem;
+        }
+        
+        .hero-section .lead {
+            font-size: 1rem;
+        }
+        
+        .btn-simit.btn-lg {
+            padding: 10px 25px;
+            font-size: 1rem;
+        }
+        
+        /* Carousel mobile improvements */
+        #hakkimizda .carousel-indicators {
+            bottom: -30px;
+        }
+        
+        #hakkimizda .carousel-indicators button {
+            width: 8px;
+            height: 8px;
+        }
+        
+        #hakkimizda .carousel-control-prev,
+        #hakkimizda .carousel-control-next {
+            width: 10%;
+        }
+        
+        /* Navbar mobile improvements */
+        .navbar .container {
+            padding: 0 10px;
+        }
+        
+        .navbar-brand img {
+            width: 60px;
+            height: 60px;
+        }
+        
+        .navbar-nav .nav-link {
+            padding: 10px 15px;
+            font-size: 0.9rem;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .hero-section h1 {
+            font-size: 1.75rem;
+        }
+        
+        .btn-simit.btn-lg {
+            padding: 8px 20px;
+            font-size: 0.9rem;
+        }
+        
+        /* Carousel mobile improvements */
+        #hakkimizda .carousel-indicators {
+            bottom: -25px;
+        }
+        
+        #hakkimizda .carousel-indicators button {
+            width: 6px;
+            height: 6px;
+        }
+        
+        #hakkimizda .carousel-control-prev,
+        #hakkimizda .carousel-control-next {
+            width: 8%;
+        }
+        
+        .carosel-img{
+          width: 50%;
+          object-fit: cover;
+        }
+        
+        /* Navbar mobile improvements */
+        .navbar .container {
+            padding: 0 5px;
+        }
+        
+        .navbar-brand img {
+            width: 50px;
+            height: 50px;
+        }
+        
+        .navbar-nav .nav-link {
+            padding: 8px 10px;
+            font-size: 0.85rem;
+        }
+    }
+    
+    .section-title {
+        color: var(--simit-brown);
+        font-weight: bold;
+        margin-bottom: 30px;
+        position: relative;
+        padding-bottom: 15px;
+    }
+    
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: var(--simit-gold);
+    }
+    
+    .product-card {
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .product-card:hover {
+        transform: translateY(-10px);
+    }
+    
+    .product-card img {
+        height: 250px;
+        object-fit: cover;
+    }
+    
+    .feature-icon {
+        font-size: 3rem;
+        color: var(--simit-gold);
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .feature-icon:hover {
+        color: var(--simit-brown);
+        transform: scale(1.1);
+        transition: all 0.3s ease;
+    }
+    
+    .contact-info {
+        background: var(--simit-cream);
+        padding: 30px;
+        border-radius: 15px;
+        border: 2px solid var(--simit-gold);
+        box-shadow: 0 4px 15px rgba(139, 69, 19, 0.1);
+    }
+    
+    .contact-info h5 {
+        color: var(--simit-brown);
+        border-bottom: 2px solid var(--simit-gold);
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .contact-info p {
+        margin-bottom: 10px;
+        color: #333;
+    }
+    
+    .contact-info i {
+        color: var(--simit-gold);
+        margin-right: 10px;
+        width: 20px;
+        text-align: center;
+    }
+    
+    /* Contact info mobile improvements */
+    @media (max-width: 768px) {
+        .contact-info {
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .contact-info h5 {
+            font-size: 1.3rem;
+        }
+        
+        .contact-info p {
+            font-size: 0.9rem;
+        }
+        
+        /* Location cards mobile improvements */
+        .location-card {
+            margin-bottom: 15px;
+        }
+        
+        .location-card .btn-simit {
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .contact-info {
+            padding: 15px;
+        }
+        
+        .contact-info h5 {
+            font-size: 1.2rem;
+        }
+        
+        .contact-info p {
+            font-size: 0.85rem;
+        }
+        
+        /* Location cards mobile improvements */
+        .location-card {
+            margin-bottom: 10px;
+        }
+        
+        .location-card .btn-simit {
+            padding: 8px;
+            font-size: 0.85rem;
+        }
+        
+        .location-card .card-title {
+            font-size: 1.1rem;
+        }
+    }
+    
+    .footer {
+        background: var(--simit-brown);
+        color: white;
+        padding: 30px 0;
+    }
+    
+    .navbar {
+        background: var(--simit-brown) !important;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    /* Navbar decorative elements */
+    .navbar::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -10%;
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(circle, rgba(218, 165, 32, 0.15) 0%, transparent 70%);
+        border-radius: 50%;
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    .navbar::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, 
+            transparent 0%, 
+            var(--simit-gold) 25%, 
+            var(--simit-gold) 50%, 
+            var(--simit-gold) 75%, 
+            transparent 100%);
+        box-shadow: 0 0 10px rgba(218, 165, 32, 0.5);
+    }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0) translateX(0); }
+        50% { transform: translateY(20px) translateX(30px); }
+    }
+    
+    /* Navbar brand with icon effect */
+    .navbar-brand {
+        position: relative;
+        z-index: 1;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+    
+    .navbar-brand:hover {
+        transform: scale(1.05);
+        color: var(--simit-gold) !important;
+    }
+    
+    .navbar-brand i {
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+    
+    .navbar-brand:hover i {
+        transform: rotate(10deg) scale(1.2);
+    }
+    
+    /* Nav links with underline effect */
+    .navbar-nav .nav-link {
+        position: relative;
+        margin: 0 5px;
+        transition: color 0.3s ease;
+    }
+    
+    .navbar-nav .nav-link::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background: var(--simit-gold);
+        transition: width 0.3s ease;
+    }
+    
+    .navbar-nav .nav-link:hover::before,
+    .navbar-nav .nav-link.active::before {
+        width: 80%;
+    }
+    
+    .navbar-nav .nav-link:hover {
+        color: var(--simit-gold) !important;
+    }
+    
+    .btn-simit {
+        background: var(--simit-gold);
+        color: white;
+        border: none;
+        padding: 10px 30px;
+        border-radius: 25px;
+        font-weight: bold;
+    }
+    
+    .btn-simit:hover {
+        background: var(--simit-brown);
+        color: white;
+    }
+    
+    /* Accordion Styling */
+    .accordion-item {
+        border: none;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .accordion-button {
+        background: var(--simit-brown);
+        color: white;
+        font-weight: bold;
+        font-size: 1.2rem;
+        border: none;
+        display: flex;
+        align-items: center;
+    }
+    
+    .accordion-button:not(.collapsed) {
+        background: var(--simit-gold);
+        color: white;
+        box-shadow: none;
+    }
+    
+    .accordion-button:focus {
+        box-shadow: none;
+        border: none;
+    }
+    
+    .accordion-button::after {
+        filter: brightness(0) invert(1);
+    }
+    
+    .accordion-body {
+        background: var(--simit-cream);
+        padding: 30px;
+    }
+    
+    /* Sub Accordion (İç Accordion) Styling */
+    .sub-accordion-button {
+        background: linear-gradient(135deg, var(--simit-brown) 0%, var(--simit-gold) 100%);
+        color: white;
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+    
+    .sub-accordion-button:not(.collapsed) {
+        background: linear-gradient(135deg, var(--simit-gold) 0%, var(--simit-brown) 100%);
+        color: white;
+    }
+    
+    #iceceklerSubAccordion .accordion-item {
+        margin-bottom: 10px;
+        border-radius: 8px;
+    }
+    
+    #iceceklerSubAccordion .accordion-body {
+        background: white;
+        padding: 20px;
+    }
+    /*Added by Batu*/
+
+    .btn-ozellikleri {
+      width: 100px;
+      justify-content: right;
+      margin-bottom: 50px;
+      background-color: #666;
+      transition: 150ms ease-in-out 0s;
+    }
+
+    .btn-ozellikleri:hover {
+      width: 200px;
+      justify-content: right;
+      margin-bottom: 50px;
+      background-color: var(--simit-brown);
+      transition: 150ms ease-in-out 0s;
+    }
+
+    /*destek--------------------------------------------------------------*/
+
+      /* Genel Buton Stili */
+        .hover-button {
+            /* İhtiyaca göre düzenlenebilecek genel stil ayarları */
+            margin-top: 50px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: var(--simit-brown); /* Mavi */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            
+            /* Metin Değişimi İçin Kritik Ayarlar */
+            overflow: hidden; 
+            position: relative; 
+            margin-bottom:50px ;
+
+            /* BOYUT VE RENK GEÇİŞLERİ İÇİN KRİTİK AYARLAR */
+            width: 100px; /* Başlangıç Genişliği (Metne uygun ayarlanabilir) */
+            transition: width 0.4s ease-in-out, background-color 0.4s ease-in-out, transform 0.4s ease-in-out;
+        }
+
+        /* Varsayılan metin */
+        .default-text {
+            opacity: 1; 
+            transition: opacity 0.3s ease-in-out; 
+            display: block; /* Metnin kendi alanını kaplaması için */
+        }
+
+        /* Hover (Fare Üzerine Geldiğinde) metin - başlangıçta gizli */
+        .hover-text {
+            position: absolute; 
+            top: 50%;
+            left: 50%;
+            /* Metni butonun tam ortasına hizalar */
+            transform: translate(-50%, -50%); 
+            
+            opacity: 0; /* Başlangıçta gizli */
+            transition: opacity 0.3s ease-in-out 0.1s; /* Gecikmeli geçiş */
+            
+            width: 90%; /* Metnin ortalanması için */
+            text-align: center;
+            white-space: nowrap; /* Uzun metnin alt satıra geçmesini engeller */
+        }
+
+        /* HOVER DURUMU: Butonun Kendisine Uygulanan Değişiklikler */
+        .hover-button:hover {
+            /* HOVER DURUMUNDA YENİ GENİŞLİK */
+            width: 225px; /* Butonun büyüdüğü genişlik */
+            background-color: #11a600; /* Ekstra görsel etki için koyu renk */
+            color: #ffff00;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+        }
+
+        /* HOVER DURUMU: Metinlerin Görünürlük Değişimi */
+        .hover-button:hover .default-text {
+            opacity: 0; /* Varsayılan metni gizle */
+        }
+
+        .hover-button:hover .hover-text {
+            opacity: 1; /* Yeni metni göster */
+        }
+    
+    /*destek----------------------------------------------------*/
+
+
+    /*Added by Batu*/
+
+    /* Responsive Improvements */
+    @media (max-width: 992px) {
+        .product-card img {
+            height: 200px;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .section-title {
+            font-size: 1.5rem;
+        }
+        
+        .navbar-brand {
+            font-size: 1rem;
+        }
+        
+        .contact-info h5 {
+            font-size: 1rem;
+        }
+        
+        .product-card {
+            margin-bottom: 20px;
+        }
+        
+        /* Yorumlar section mobile fixes */
+        .yorum-ust {
+            flex-wrap: wrap;
+        }
+        
+        .yorum-icerik {
+            margin-left: 0;
+            margin-top: 10px;
+        }
+        
+        .yorum-alt {
+            margin-left: 0;
+            flex-wrap: wrap;
+        }
+        
+        .yanit-formu {
+            margin-left: 0;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .btn-simit {
+            padding: 8px 20px;
+            font-size: 0.9rem;
+        }
+        
+        .product-card img {
+            height: 180px;
+        }
+        
+        
+        /* Yorumlar section mobile fixes */
+        .yorum-profil-resmi {
+            width: 30px;
+            height: 30px;
+            font-size: 0.8rem;
+        }
+        
+        .overlay-title {
+            font-size: 1rem;
+        }
+        
+        .overlay-text {
+            font-size: 0.8rem;
+        }
+    }
+    
+    /* Additional mobile fixes for small screens */
+    @media (max-width: 400px) {
+        .hero-section h1 {
+            font-size: 1.5rem;
+        }
+        
+        .hero-section {
+            padding: 40px 0;
+        }
+        
+        .card-img-wrapper {
+            height: 150px;
+        }
+        
+        .yorum-alt span {
+            margin-right: 10px;
+            font-size: 0.8rem;
+        }
+        
+        /* Contact form mobile improvements */
+        .form-label {
+            font-size: 0.9rem;
+        }
+        
+        .form-control {
+            font-size: 0.9rem;
+            padding: 8px;
+        }
+        
+        /* Footer mobile improvements */
+        .footer h5 {
+            font-size: 1.1rem;
+        }
+        
+        .footer p {
+            font-size: 0.9rem;
+        }
+        
+        .social-links a {
+            font-size: 1.2rem;
+        }
+        
+        .btn-simit.btn-lg {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+        }
+        
+        /* WhatsApp contact button mobile improvements */
+        .contact-info .btn-simit {
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+    }
+    
+    /* Print Styles */
+    @media print {
+        .navbar, .footer, .btn-simit {
+            display: none;
+        }
+    }
+    
+    section.yorumlar {
+      padding: 60px 0;
+      background-color: var(--simit-cream);
+    }
+
+    .yorum-kutusu {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .yorum-ust {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .yorum-profil-resmi {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--simit-brown);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+
+    .yorum-kullanici {
+      font-weight: bold;
+      color: var(--simit-brown);
+      margin-right: 10px;
+    }
+
+    .yorum-tarih {
+      color: var(--simit-gold);
+      font-size: 0.9em;
+    }
+
+    .yorum-icerik {
+      margin-left: 55px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .yorum-alt {
+      display: flex;
+      margin-left: 55px;
+      margin-top: 10px;
+      color: var(--simit-gold);
+      font-size: 0.9em;
+    }
+
+    .yorum-alt span {
+      margin-right: 20px;
+      cursor: pointer;
+    }
+
+    .yorum-alt i {
+      margin-right: 5px;
+    }
+
+    .yorum-alt .active {
+      color: var(--simit-brown);
+    }
+
+    .yorum-formu {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 30px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .yorum-formu h5 {
+      margin-bottom: 15px;
+      color: var(--simit-brown);
+    }
+
+    .yorum-formu textarea {
+      width: 100%;
+      height: 120px;
+      padding: 12px;
+      border: 1px solid var(--simit-gold);
+      border-radius: 5px;
+      resize: vertical;
+      margin-bottom: 15px;
+    }
+
+    .yorum-formu button {
+      background-color: var(--simit-brown);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .yorum-formu button:hover {
+      background-color: #6b370f;
+    }
+
+    .yanit-formu {
+      display: none;
+      margin-top: 15px;
+      padding: 15px;
+      background-color: var(--simit-cream);
+      border-radius: 5px;
+    }
+
+    .yanit-formu.show {
+      display: block;
+    }
+
+    .yanit-formu textarea {
+      width: 100%;
+      height: 80px;
+      padding: 10px;
+      border: 1px solid var(--simit-gold);
+      border-radius: 5px;
+      resize: vertical;
+      margin-bottom: 10px;
+    }
+
+    .yanit-formu button {
+      background-color: var(--simit-brown);
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .yanit-formu button:hover {
+      background-color: #6b370f;
+    }
+
+    /* Genel hover efektleri */
+    .hover-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .hover-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    }
+
+    /* Resim zoom ve overlay */
+    .card-img-wrapper {
+      position: relative;
+      overflow: hidden;
+      height: 250px; /* kart yüksekliği */
+    }
+
+    .card-img-top {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .hover-card:hover .card-img-top {
+      transform: scale(1.15);
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      padding: 20px 10px;
+      transform: translateY(100%);
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      opacity: 0;
+    }
+
+    .hover-card:hover .overlay {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .overlay-title {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+      transform: translateY(20px);
+      transition: transform 0.4s ease;
+    }
+
+    .hover-card:hover .overlay-title {
+      transform: translateY(0);
+    }
+
+    .overlay-text {
+      font-size: 0.9rem;
+      transform: translateY(20px);
+      transition: transform 0.4s ease;
+    }
+
+    .hover-card:hover .overlay-text {
+      transform: translateY(0);
+    }
+
+
+      
+      /* Kampanyalar section mobile improvements */
+      #kampanyalar .row.g-4 {
+        justify-content: center;
+      }
+      
+      #kampanyalar .col-md-6.col-lg-4 {
+        display: flex;
+        justify-content: center;
+      }
+      
+      #kampanyalar .card {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+      }
+   
+      
+      /* Kampanyalar section mobile improvements */
+      #kampanyalar .card {
+        max-width: 250px;
+      }
+      
+      #kampanyalar .section-title {
+        font-size: 2.1rem !important;
+      }
+      
+      #kampanyalar .card-body {
+        padding: 15px;
+      }
+      
+      #kampanyalar .card-title {
+        font-size: 1.1rem;
+      }
+      
+      #kampanyalar .card-text {
+        font-size: 0.9rem;
+      }
+    
+
+    /* Mobile-friendly accordion improvements */
+    @media (max-width: 768px) {
+      .accordion-button {
+        padding: 12px 15px;
+        font-size: 1rem;
+      }
+      
+      .accordion-button img {
+        width: 35px !important;
+        height: 35px !important;
+      }
+      
+      .accordion-body {
+        padding: 15px;
+      }
+      
+      /* Ürünler section mobile improvements */
+      #urunler .card {
+        margin-bottom: 15px;
+      }
+      
+      #urunler .card-img-top {
+        height: 180px;
+        object-fit: cover;
+      }
+      
+      /* Yorumlar section mobile improvements */
+      .yorum-kutusu {
+        padding: 15px;
+        margin-bottom: 15px;
+      }
+      
+      .yorum-ust {
+        flex-wrap: wrap;
+      }
+      
+      .yorum-icerik {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+      
+      .yorum-alt {
+        margin-left: 0;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      
+      .yorum-formu textarea {
+        height: 100px;
+      }
+      
+      /* İletişim section mobile improvements */
+      #iletisim .form-control {
+        margin-bottom: 10px;
+      }
+      
+      #iletisim .btn-simit {
+        width: 100%;
+        padding: 12px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .accordion-button {
+        font-size: 0.9rem;
+        padding: 10px 12px;
+      }
+      
+      .accordion-button img {
+        width: 30px !important;
+        height: 30px !important;
+        margin-right: 10px !important;
+      }
+      
+      /* Yorumlar section extra small mobile improvements */
+      .yorum-profil-resmi {
+        width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
+        margin-right: 10px;
+      }
+      
+      .yorum-kullanici {
+        font-size: 0.9rem;
+      }
+      
+      /* Location links mobile improvements */
+      .location-card {
+        margin-bottom: 15px;
+      }
+      
+      .location-card .card-body {
+        padding: 15px;
+      }
+      
+      .location-card .card-title {
+        font-size: 1rem;
+      }
+      
+      .location-card .card-text {
+        font-size: 0.9rem;
+      }
+      
+      .location-card .btn-simit {
+        padding: 8px;
+        font-size: 0.85rem;
+      }
+      
+      /* Contact info mobile improvements */
+      .contact-info {
+        padding: 20px;
+      }
+      
+      .contact-info h4 {
+        font-size: 1.2rem;
+      }
+      
+      .contact-info p {
+        font-size: 0.9rem;
+      }
+      
+      .yorum-tarih {
+        font-size: 0.8rem;
+      }
+      
+      .yorum-icerik {
+        font-size: 0.9rem;
+      }
+      
+      .yorum-alt {
+        font-size: 0.8rem;
+      }
+      
+      .yorum-formu textarea {
+        height: 80px;
+        font-size: 0.9rem;
+      }
+      
+      .yorum-formu button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+      }
+      
+      /* Card image height improvements for mobile */
+      .card-img-wrapper {
+        height: 180px;
+      }
+      
+      .product-card img {
+        height: 150px;
+      }
+    }
+
+    /* Location links styling */
+    .location-links {
+        margin-bottom: 20px;
+    }
+
+    .location-card {
+        border: 1px solid #dee2e6;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .location-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .location-card .card-title {
+        color: var(--simit-brown);
+        margin-bottom: 10px;
+    }
+
+    .location-card .card-text {
+        color: #666;
+        margin-bottom: 15px;
+    }
+
+    .location-card .btn-simit {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .location-map {
+        height: 200px;
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    
+        /* Kampanyalar section mobile improvements */
+        #kampanyalar .row.g-4 {
+            justify-content: center;
+        }
+        
+        #kampanyalar .col-md-6.col-lg-4 {
+            display: flex;
+            justify-content: center;
+        }
+        
+        #kampanyalar .card {
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 20px;
+        }
+        
+        /* Location links mobile improvements */
+        .location-card {
+            margin-bottom: 15px;
+        }
+        
+        .location-card .card-body {
+            padding: 20px;
+        }
+        
+        .location-card .card-title {
+            font-size: 1.1rem;
+        }
+        
+        .location-card .btn-simit {
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .location-map {
+            height: 150px;
+        }
+    
+
+   
+        
+        /* Kampanyalar section mobile improvements */
+        #kampanyalar .card {
+            max-width: 250px;
+        }
+        
+        #kampanyalar .section-title {
+            font-size: 1.5rem;
+        }
+        
+        #kampanyalar .card-body {
+            padding: 15px;
+        }
+        
+        #kampanyalar .card-title {
+            font-size: 1.1rem;
+        }
+        
+        #kampanyalar .card-text {
+            font-size: 0.9rem;
+        }
+        
+        /* Location links mobile improvements */
+        .location-card .card-body {
+            padding: 15px;
+        }
+        
+        .location-card .card-title {
+            font-size: 1rem;
+        }
+        
+        .location-card .card-text {
+            font-size: 0.9rem;
+        }
+        
+        .location-card .btn-simit {
+            padding: 8px;
+            font-size: 0.85rem;
+        }
+        
+        .location-map {
+            height: 120px;
+        }
+        
+        /* Contact info mobile improvements */
+        .contact-info {
+            padding: 20px;
+        }
+        
+        .contact-info h4 {
+            font-size: 1.2rem;
+        }
+        
+        .contact-info p {
+            font-size: 0.9rem;
+        }
+    
+
+
+    
+/* Genel hover efektleri */
+.hover-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.hover-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+/* Resim zoom ve overlay */
+.card-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 250px; /* kart yüksekliği */
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.hover-card:hover .card-img-top {
+  transform: scale(1.15);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 20px 10px;
+  transform: translateY(100%);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.hover-card:hover .overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.overlay-title {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+}
+
+.hover-card:hover .overlay-title {
+  transform: translateY(0);
+}
+
+.overlay-text {
+  font-size: 0.9rem;
+  transform: translateY(20px);
+
+  transition: transform 0.4s ease;
+}
+
+.hover-card:hover .overlay-text {
+  transform: translateY(0);
+}
+
+
+  /* Hakkımızda carousel mobile improvements */
+  #hakkimizda .carousel-item img {
+    width:100% !important;
+    height:540px !important;
+  }
+      
+  #hakkimizda .carousel-content {
+    margin-top: 20px;
+    text-align: center;
+  }
+      
+  .feature-icon {
+    font-size: 2.5rem;
+  }
+
+
+/* Mobile-friendly accordion improvements */
+@media (max-width: 768px) {
+  .accordion-button {
+    padding: 12px 15px;
+    font-size: 1rem;
+  }
+  
+  .accordion-button img {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  
+  .accordion-body {
+    padding: 15px;
+  }
+  
+  /* Sub accordion mobile improvements */
+  .sub-accordion-button {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+  
+  /* Ürünler section mobile improvements */
+  #urunler .card {
+    margin-bottom: 15px;
+  }
+  
+  #urunler .card-img-top {
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  /* Yorumlar section mobile improvements */
+  .yorum-kutusu {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .yorum-ust {
+    flex-wrap: wrap;
+  }
+  
+  .yorum-icerik {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  
+  .yorum-alt {
+    margin-left: 0;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .yorum-formu textarea {
+    height: 120px;
+  }
+  
+  .yorum-formu button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+  }
+  
+  /* İletişim section mobile improvements */
+  #iletisim .form-control {
+    margin-bottom: 10px;
+  }
+  
+  #iletisim .btn-simit {
+    width: 100%;
+    padding: 12px;
+  }
+  
+  /* Contact form mobile improvements */
+  #iletisim .col-md-6 {
+    margin-bottom: 15px;
+  }
+  
+  #iletisim textarea {
+    height: 120px;
+  }
+  
+  /* Footer mobile improvements */
+  .footer {
+    padding: 20px 0;
+  }
+  
+  .footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .footer p {
+    font-size: 0.9rem;
+  }
+  
+  /* Haberler ve Gelişmeler section tablet improvements */
+  #haberler-gelistirmeler .card-img-wrapper {
+    height: 220px;
+  }
+  
+  #haberler-gelistirmeler .overlay-title {
+    font-size: 1rem;
+  }
+  
+  #haberler-gelistirmeler .overlay-text {
+    font-size: 0.8rem;
+  }
+  
+  /* Card image height improvements for tablets */
+  .card-img-wrapper {
+    height: 220px;
+  }
+  
+  .product-card img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .accordion-button {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+  
+  .accordion-button img {
+    width: 30px !important;
+    height: 30px !important;
+    margin-right: 10px !important;
+  }
+  
+  .sub-accordion-button {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+  
+  /* Yorumlar section extra small mobile improvements */
+  .yorum-profil-resmi {
+    width: 35px;
+    height: 35px;
+    font-size: 0.8rem;
+    margin-right: 10px;
+  }
+  
+  .yorum-kullanici {
+    font-size: 0.9rem;
+  }
+  
+  .yorum-tarih {
+    font-size: 0.8rem;
+  }
+  
+  .yorum-icerik {
+    font-size: 0.9rem;
+  }
+  
+  .yorum-alt {
+    font-size: 0.8rem;
+  }
+  
+  .yorum-formu textarea {
+    height: 80px;
+    font-size: 0.9rem;
+  }
+  
+  .yorum-formu button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+  
+  /* Yorum yanıt form mobile improvements */
+  .yanit-formu textarea {
+    height: 80px;
+    font-size: 0.9rem;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .yanit-formu button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    width: 100%;
+    margin-top: 5px;
+  }
+  
+  /* Footer mobile improvements */
+  .footer .col-md-4 {
+    margin-bottom: 20px;
+  }
+  
+  .footer .col-md-4:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Contact form mobile improvements */
+  #iletisim .col-md-6 {
+    margin-bottom: 10px;
+  }
+  
+  #iletisim textarea {
+    height: 100px;
+  }
+  
+  /* WhatsApp contact button mobile improvements */
+  .contact-info .btn-simit {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra small devices (phones, less than 400px) */
+@media (max-width: 400px) {
+  .accordion-button {
+    font-size: 0.85rem;
+    padding: 8px 10px;
+  }
+  
+  .yorum-profil-resmi {
+    width: 30px;
+    height: 30px;
+    font-size: 0.7rem;
+  }
+  
+  .yorum-kullanici {
+    font-size: 0.85rem;
+  }
+  
+  .yorum-icerik {
+    font-size: 0.85rem;
+  }
+  
+  .yorum-alt {
+    font-size: 0.75rem;
+  }
+  
+  .yorum-formu textarea {
+    height: 70px;
+    font-size: 0.85rem;
+  }
+  
+  .yorum-formu button {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+  
+  /* Yorum yanıt form extra small mobile improvements */
+  .yanit-formu textarea {
+    height: 70px;
+    font-size: 0.85rem;
+  }
+  
+  .yanit-formu button {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+  
+  /* Contact form extra small mobile improvements */
+  #iletisim textarea {
+    height: 80px;
+    font-size: 0.85rem;
+  }
+  
+  #iletisim .btn-simit {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+  
+  /* Haberler ve Gelişmeler section mobile improvements */
+  #haberler-gelistirmeler .card-img-wrapper {
+    height: 200px;
+  }
+  
+  #haberler-gelistirmeler .card-title {
+    font-size: 1.25rem;
+  }
+  
+  #haberler-gelistirmeler .card-text {
+    font-size: 0.9rem;
+  }
+  
+  /* Card image height improvements for mobile */
+  .card-img-wrapper {
+    height: 180px;
+  }
+  
+  .product-card img {
+    height: 150px;
+  }
+}
+
+.section-title {
+    color: var(--simit-brown);
+    font-weight: bold;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--simit-gold);
+}
+
+.news-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.news-card:hover {
+    transform: translateY(-10px);
+}
+
+.news-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-date {
+    background: var(--simit-gold);
+    color: var(--simit-brown);
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.btn-simit {
+    background: var(--simit-gold);
+    color: var(--simit-brown);
+    border: 2px solid var(--simit-brown);
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-simit:hover {
+    background: var(--simit-brown);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: var(--simit-gold);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+footer {
+    background: var(--simit-brown);
+    color: white;
+    padding: 30px 0;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .news-card .card-img-top {
+        height: 180px;
+        object-fit: cover;
+    }
+    
+    .news-card .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .news-card .card-text {
+        font-size: 0.9rem;
+    }
+    
+    .feature-icon {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 40px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
+    
+    .news-card .card-img-top {
+        height: 150px;
+    }
+    
+    .news-card .card-title {
+        font-size: 1rem;
+    }
+    
+    .news-card .card-text {
+        font-size: 0.85rem;
+    }
+    
+    .feature-icon {
+        font-size: 2rem;
+    }
+    
+    .display-4 {
+        font-size: 2rem;
+    }
+}
+
+/* Custom color classes to replace inline styles */
+.color-simit-brown {
+  color: var(--simit-brown);
+}
+
+.bg-color-simit-brown {
+  background-color: #8B4513;
+}
+
+.bg-color-white-transparent {
+  background-color: rgba(255,255,255,0.2);
+}
+
+.fw-bold-display-4 {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.fw-bold-display-6 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.text-center-mb-4 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.mb-3-color {
+  margin-bottom: 1rem;
+}
+.str
+{
+  vertical-align: middle;
+}
+.cemo
+{
+  width: 45px; 
+  height: 45px; 
+  object-fit: cover;
+}
+.footer-hr
+{
+  background-color: rgba(255,255,255,0.2);
+}
+
+/* Custom Cake Carousel Styles */
+.custom-cake-carousel {
+    max-width: 400px;
+    margin: auto;
+}
+
+.custom-cake-carousel .carousel-inner img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.custom-cake-carousel .carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.custom-cake-carousel .carousel-control-prev,
+.custom-cake-carousel .carousel-control-next {
+    width: 10%;
+}
+
+.custom-cake-carousel .carousel-control-prev-icon,
+.custom-cake-carousel .carousel-control-next-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* Ensure carousel fills the entire card */
+.product-card .carousel {
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+}
+
+.product-card .carousel-inner,
+.product-card .carousel-item {
+    height: 100%;
+}
+
+ .social-links a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background: var(--simit-gold);
+  color: var(--simit-brown);
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: var(--simit-brown);
+    color: white;
+  transform: translateY(-3px);
+}
